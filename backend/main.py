@@ -24,3 +24,10 @@ app.include_router(simulation_router)
 from api.routes.professional_routes import router as professional_router
 
 app.include_router(professional_router)
+from db.database import engine
+from db.models import Base
+
+from api.routes.career_routes import router as career_router
+app.include_router(career_router)
+from api.routes.network_routes import router as network_router
+app.include_router(network_router)
